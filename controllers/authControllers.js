@@ -1,6 +1,6 @@
 const User = require("../models/User");
-const {handleErrors} = require("../errorHandler/authErrorHandler");
-console.log(handleErrors)
+const {handleErrors} = require("../utils/authErrorHandler");
+const {encrypt}= require("../utils/encrypt");
 const login_get = (req,res) => {
 	res.send("Login")
 }
@@ -13,12 +13,15 @@ const signup_get = (req,res) => {
 }
 const signup_post = async (req,res) => {
 	try {
-		const data = req.body;
-		const user = await User.create(data)
+		const username = req.body.username;
+		const email = req.body.email;
+		let password = req.body.password;
+		password = await encrypt(password);
+		const user = await User.create({username,email,password});
 		res.status(200).json({user})
 	} catch(e) {
-		console.log(handleErrors(e));
-		// console.log(e);
+		let errors = handleErrors(e)
+		res.status(400).json({errors})
 	}
 }
 

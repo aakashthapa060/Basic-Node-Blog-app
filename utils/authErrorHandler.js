@@ -1,10 +1,11 @@
 const handleErrors = (err) => {
-	// console.log(err.message, err.code)
+	console.log(err.message, err.code)
 	let errors = {
 		username:"",
 		email: "",
 		password: ""
 	}
+	
 	//Duplicate error code
 	if(err.message.includes("email_1 dup key") && err.code === 11000){
 		errors.email = "This Email has already Registred."
