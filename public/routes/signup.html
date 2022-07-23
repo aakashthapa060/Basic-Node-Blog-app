@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <div class="left logo">
+                <h2>Node-Blog</h2>
+            </div>
+            <div class="nav-links right">
+                <ul>
+                    <li><a href="#">Create</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/routes/signup">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="signup-form">
+        <form method="POST">
+            <div class="input-field">
+                <label for="username">Username:</label>
+
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="input-field">
+                <label for="email">Email:</label>
+
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button class="signupbtn">Create</button>
+        </form>
+    </div>
+</body>
+<script src="../assets/js/signup.js"></script>
+</html>
