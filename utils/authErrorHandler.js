@@ -5,7 +5,14 @@ const handleErrors = (err) => {
 		email: "",
 		password: ""
 	}
-	
+	// Incorrect Email
+	if(err.message === "Incorrect Email"){
+		errors.email = "The Email is not Registered"
+	}
+	// Incorrect Password
+	if(err.message === "Incorrect Password"){
+		errors.password = "The Password is Incorrect"
+	}
 	//Duplicate error code
 	if(err.message.includes("email_1 dup key") && err.code === 11000){
 		errors.email = "This Email has already Registred."
