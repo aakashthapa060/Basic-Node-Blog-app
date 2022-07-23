@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cookieParser =require("cookie-parser");
 const connectDB = require("./database/connect");
 const authRoutes = require("./routes/authRoutes");
 // Init
@@ -9,6 +10,7 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(express.static("public"))
+app.use(cookieParser())
 // Routes
 app.get("/",(req,res) => {
 })
