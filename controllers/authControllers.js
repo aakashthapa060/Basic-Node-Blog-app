@@ -40,10 +40,15 @@ const signup_post = async (req,res) => {
 	}
 }
 
+const logout = (req,res) => {
+	res.cookie("userAuthenticated", "", {maxAge:1});
+	res.redirect("/")
+}
 module.exports = {
 	login_get,
 	login_post,
 	signup_get,
-	signup_post
+	signup_post,
+	logout
 }
 
