@@ -1,24 +1,15 @@
 {
-  "name": "basic-node-blog-app",
+  "name": "blogging-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aakashthapa060/Basic-Node-Blog-app.git"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aakashthapa060/Basic-Node-Blog-app/issues"
-  },
-  "homepage": "https://github.com/aakashthapa060/Basic-Node-Blog-app#readme",
   "dependencies": {
-    "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
